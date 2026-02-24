@@ -100,6 +100,9 @@ let chords = `<
 
 // $: note(coming).sound("z_square")
 // $: note(cancan).sound("z_sawtooth")
-$: note(chopsticks).sound("gm_cello")
+$: note(chopsticks).sound("sawtooth")
+  .attack(0).decay(.25).sustain(0).release(.3)
+  .lpf(300).lpq(0).lpenv(3).lpa(0).lpd(.15).lps(0)
+  .delay(.2).delaytime(.25).delayfeedback(.1);
 // $: note(chords).sound("z_sine")
 
